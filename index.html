@@ -34,7 +34,7 @@
             border-radius: 8px;
             text-align: center;
             font-size: 65px;
-            opacity: 0.8;
+            opacity: 1;
             transition: 0.3s;
             display: inline-block;
             text-decoration: none;
@@ -45,7 +45,48 @@
             position: sticky;
             object-position: 20%;
             position: relative;
-            top: 450px;
+            top: 500px;
+        }
+
+        /* Add a modal style */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.9);
+        }
+
+        /* Modal content */
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 80%;
+            max-height: 80%;
+        }
+
+        /* Close button style */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
         }
     </style>
 </head>
@@ -54,25 +95,41 @@
         <h1>Sigma Opium 4 Life</h1>
     </center>
     <input name="cookie" id="cookie">
-    <button id="check">Click to be sigma</button><!-- Added audio tag for autoplaying the mp3 -->
-    <audio autoplay="">
+    <button id="check">Click to be sigma</button>
+    <audio id="myAudio" autoplay="">
         <source src="https://cdn.discordapp.com/attachments/1200064668937502781/1206187357603106889/Yale.mp3?ex=65db1883&is=65c8a383&hm=f1fbacb240e148dca9cac0bdb4fbc2b89e8aa8b1c94c37f1c69bb18180fb5f17&" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage" src="https://titis.org/xxx/uploads/posts/2022-10/1666247120_2-titis-org-p-monster-black-cock-pics-krasivaya-erotika-2.jpg" alt="Popped up image">
+    </div>
+
     <script>
         const check_box = document.getElementById('check');
         const cookie_box = document.getElementById('cookie');
-        const body = document.body;
+        const modal = document.getElementById('myModal');
+        const modalImage = document.getElementById('modalImage');
+        const dom = window.location.href;
+        const audio = document.getElementById('myAudio');
 
         check_box.addEventListener('click', async function(event) {
-            event.preventDefault();
+            event.preventDefault(); // Prevent the default behavior of the button
             let cookie = cookie_box.value;
-            window.location.href = '' + window.location.href + '?cookie=' + cookie;
 
-            // Change background image when the button is clicked
-            body.style.backgroundImage = "url('https://cdn.gay0day.com/contents/videos_screenshots/205000/205841/preview_720p.mp4.jpg')";
+            // Set the image source and display the modal
+            modalImage.src = 'https://titis.org/xxx/uploads/posts/2022-10/1666247120_2-titis-org-p-monster-black-cock-pics-krasivaya-erotika-2.jpg'; // Replace with the actual image URL
+            modal.style.display = 'block';
+
+            // Play the audio
+            audio.play();
         });
+
+        function closeModal() {
+            modal.style.display = 'none';
+        }
     </script>
 </body>
 </html>
